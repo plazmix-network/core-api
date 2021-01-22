@@ -1,5 +1,8 @@
 package net.plazmix.core.api.service;
 
+/**
+ * @author MasterCapeXD
+ */
 public interface Service {
 
     String getName();
