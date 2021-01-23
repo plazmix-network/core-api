@@ -21,5 +21,7 @@ public interface CoreApi {
 
     CommandBuilder newCommand(String name);
 
+    CommandBuilder newCommand(String holder, String name);
+
     CommandArgumentBuilder newCommandArgument(String name);
 }
