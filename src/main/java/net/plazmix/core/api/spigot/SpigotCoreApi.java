@@ -24,4 +24,10 @@ public interface SpigotCoreApi extends CoreApi {
     PersonalViewInventoryBuilder<?> newPersonalViewInventory();
 
     PersonalViewInventoryBuilder<?> newPersonalViewInventory(Plugin plugin);
+  
+    CommandBuilder newCommand(String holder, String name);
+
+    CommandBuilder newCommand(Plugin plugin, String name);
+
+    CommandBuilder newCommand(Plugin plugin, String holder, String name);
 }
