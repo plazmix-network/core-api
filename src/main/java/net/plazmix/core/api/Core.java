@@ -3,6 +3,9 @@ package net.plazmix.core.api;
 import com.google.common.base.Preconditions;
 import lombok.Getter;
 
+/**
+ * @author MasterCapeXD
+ */
 public class Core {
 
     @Getter
