@@ -9,4 +9,6 @@ public interface JdbcDataSourceConfig {
     String getPassword();
 
     JdbcDataSourcePoolConfig getPoolConfig();
+
+    JdbcDataSourceProperties getProperties();
 }
