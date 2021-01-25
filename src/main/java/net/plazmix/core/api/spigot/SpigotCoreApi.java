@@ -13,10 +13,6 @@ public interface SpigotCoreApi extends CoreApi {
 
     Plugin getPlugin();
 
-    CommandBuilder newCommand(Plugin plugin, String name);
-
-    CommandBuilder newCommand(Plugin plugin, String holder, String name);
-
     GlobalViewInventoryBuilder<?> newGlobalViewInventory();
 
     GlobalViewInventoryBuilder<?> newGlobalViewInventory(Plugin plugin);

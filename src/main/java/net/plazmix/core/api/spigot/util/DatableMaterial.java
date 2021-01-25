@@ -1,6 +1,6 @@
 package net.plazmix.core.api.spigot.util;
 
-import me.mastercapexd.neocor.api.util.NumberValidator;
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -41,7 +41,7 @@ public final class DatableMaterial {
         Material material = Material.AIR;
         short data = 0;
 
-        if (!NumberValidator.isInteger(idData[0])) {
+        if (!StringUtils.isNumeric(idData[0])) {
             Material hashMaterial = Material.getMaterial(idData[0]);
             if (hashMaterial != null)
                 material = hashMaterial;
@@ -49,7 +49,7 @@ public final class DatableMaterial {
             material = Material.getMaterial(Integer.parseInt(idData[0]));
 
         if (idData.length > 1)
-            if (NumberValidator.isShort(idData[1]))
+            if (StringUtils.isNumeric(idData[1]))
                 data = Short.parseShort(idData[1]);
 
         this.material = material;
