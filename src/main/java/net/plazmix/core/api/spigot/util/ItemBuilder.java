@@ -1,9 +1,8 @@
 package net.plazmix.core.api.spigot.util;
 
 import com.google.common.collect.Lists;
-import me.mastercapexd.neocor.api.common.color.Colors;
-import me.mastercapexd.neocor.api.util.Builder;
-import me.mastercapexd.neocor.api.util.EnumUtils;
+import net.plazmix.core.api.common.util.Builder;
+import net.plazmix.core.api.common.util.EnumUtils;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
