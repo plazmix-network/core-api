@@ -1,6 +1,6 @@
-package net.plazmix.core.api.service.database.mapper.mysql;
+package net.plazmix.core.api.common.orm.mysql;
 
-import net.plazmix.core.api.service.database.mapper.*;
+import net.plazmix.core.api.common.orm.*;
 import org.apache.commons.lang.StringUtils;
 
 import javax.sql.DataSource;

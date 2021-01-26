@@ -1,4 +1,4 @@
-package net.plazmix.core.api.service.database.mapper;
+package net.plazmix.core.api.common.orm;
 
 import java.util.Optional;
 import java.util.function.Function;
