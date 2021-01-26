@@ -6,6 +6,9 @@ import javax.sql.DataSource;
 import java.io.File;
 import java.util.Optional;
 
+/**
+ * @author MasterCapeXD
+ */
 public interface JdbcDatabaseService extends Service {
 
     JdbcDataSourceConfig configureFromFile(File file);

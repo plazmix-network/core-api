@@ -1,5 +1,8 @@
 package net.plazmix.core.api.service;
 
+/**
+ * @author MasterCapeXD
+ */
 public abstract class AbstractService implements Service {
 
     protected boolean enabled;

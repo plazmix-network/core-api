@@ -6,6 +6,9 @@ import net.plazmix.core.api.Core;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * @author MasterCapeXD
+ */
 public abstract class AbstractConfig<T> implements Config<T> {
 
     protected final File file;

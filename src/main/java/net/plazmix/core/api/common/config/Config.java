@@ -3,6 +3,9 @@ package net.plazmix.core.api.common.config;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * @author MasterCapeXD
+ */
 public interface Config<T> {
 
     String getName();

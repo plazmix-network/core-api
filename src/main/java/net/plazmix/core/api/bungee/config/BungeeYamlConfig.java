@@ -14,6 +14,9 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * @author MasterCapeXD
+ */
 public class BungeeYamlConfig extends AbstractConfig<Configuration> {
 
     public BungeeYamlConfig(File folder, String fileName) {

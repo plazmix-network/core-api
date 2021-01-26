@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * @author MasterCapeXD
+ */
 public class SpigotYamlConfig extends AbstractConfig<YamlConfiguration> {
 
     public SpigotYamlConfig(File folder, String fileName) {
