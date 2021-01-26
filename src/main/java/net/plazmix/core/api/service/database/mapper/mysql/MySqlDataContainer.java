@@ -234,7 +234,7 @@ public class MySqlDataContainer<T, ID> extends AbstractDataContainer<T, ID> {
     public Iterable<T> findAllById(Iterable<ID> ids) {
         List<T> list = new ArrayList<>();
         for (ID id : ids)
-            findById(id).ifPresent(result -> list.add(result));
+            findById(id).ifPresent(list::add);
         return list;
     }
 
