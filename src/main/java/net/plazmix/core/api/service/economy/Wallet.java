@@ -1,6 +1,10 @@
 package net.plazmix.core.api.service.economy;
 
+import java.util.UUID;
+
 public interface Wallet {
+
+    UUID getOwnerId();
 
     Currency getCurrency();
 

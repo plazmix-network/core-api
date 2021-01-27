@@ -9,4 +9,6 @@ import net.plazmix.core.api.CoreApi;
 public interface BungeeCoreApi extends CoreApi {
 
     Plugin getPlugin();
+
+    void saveResource(String resource);
 }
