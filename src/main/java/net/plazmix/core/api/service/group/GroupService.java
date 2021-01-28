@@ -4,10 +4,15 @@ import net.plazmix.core.api.service.Service;
 
 import java.util.Collection;
 import java.util.UUID;
+import java.util.function.Supplier;
 
 public interface GroupService extends Service {
 
     Group getUserGroup(UUID uuid);
+
+    default Supplier<Group> supplyUserGroup(UUID uuid) {
+        return () -> getUserGroup(uuid);
+    }
 
     void setUserGroup(UUID uuid, Group group);
 
