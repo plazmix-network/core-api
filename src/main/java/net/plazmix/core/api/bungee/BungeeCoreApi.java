@@ -11,4 +11,6 @@ public interface BungeeCoreApi extends CoreApi {
     Plugin getPlugin();
 
     void saveResource(String resource);
+
+    void saveResource(Plugin plugin, String resource);
 }

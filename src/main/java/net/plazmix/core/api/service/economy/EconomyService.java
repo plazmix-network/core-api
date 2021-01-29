@@ -1,5 +1,6 @@
 package net.plazmix.core.api.service.economy;
 
+import net.plazmix.core.api.common.util.CachedDataContainer;
 import net.plazmix.core.api.service.Service;
 
 import java.util.Collection;
@@ -7,7 +8,7 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.function.Supplier;
 
-public interface EconomyService extends Service {
+public interface EconomyService extends Service, CachedDataContainer<Account, UUID> {
 
     CurrencyConversions getCurrencyConversions(Currency currency);
 

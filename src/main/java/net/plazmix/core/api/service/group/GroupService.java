@@ -1,12 +1,34 @@
 package net.plazmix.core.api.service.group;
 
+import net.plazmix.core.api.common.util.CachedDataContainer;
 import net.plazmix.core.api.service.Service;
 
 import java.util.Collection;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.function.Supplier;
 
-public interface GroupService extends Service {
+public interface GroupService extends Service, CachedDataContainer<PermissionData, UUID> {
+
+    Optional<PermissionData> getPermissionData(UUID uuid);
+
+    GroupService savePermissionData(PermissionData permissionData);
+
+    GroupService removePermissionData(PermissionData permissionData);
+
+    Collection<String> getPermissions(UUID uuid);
+
+    default Supplier<Collection<String>> supplyPermissions(UUID uuid) {
+        return () -> getPermissions(uuid);
+    }
+
+    GroupService addPermission(UUID uuid, String permission);
+
+    GroupService removePermission(UUID uuid, String permission);
+
+    GroupService addPermissions(UUID uuid, Collection<String> permissions);
+
+    GroupService removePermissions(UUID uuid, Collection<String> permissions);
 
     Group getUserGroup(UUID uuid);
 
