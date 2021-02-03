@@ -1,7 +1,7 @@
 package net.plazmix.core.api.service.group;
 
 import lombok.Getter;
-import net.plazmix.core.api.spigot.util.Colors;
+import net.plazmix.core.api.Core;
 
 @Getter
 public enum Group {
@@ -18,9 +18,9 @@ public enum Group {
     private final boolean staff;
 
     Group(String prefix, String suffix, String displayName, boolean staff) {
-        this.prefix = Colors.colorize(prefix);
-        this.suffix = Colors.colorize(suffix);
-        this.displayName = Colors.colorize(displayName);
+        this.prefix = Core.getApi().colorize(prefix);
+        this.suffix = Core.getApi().colorize(suffix);
+        this.displayName = Core.getApi().colorize(displayName);
         this.staff = staff;
     }
 }

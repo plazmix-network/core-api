@@ -4,6 +4,7 @@ import net.plazmix.core.api.common.command.CommandArgumentBuilder;
 import net.plazmix.core.api.common.command.CommandBuilder;
 import net.plazmix.core.api.service.Service;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -24,4 +25,8 @@ public interface CoreApi {
     CommandBuilder newCommand(String holder, String name);
 
     CommandArgumentBuilder newCommandArgument(String name);
+
+    String colorize(String str);
+
+    List<String> colorize(List<String> stringList);
 }
