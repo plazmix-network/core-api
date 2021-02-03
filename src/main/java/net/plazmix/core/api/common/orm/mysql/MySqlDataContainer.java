@@ -182,9 +182,10 @@ public class MySqlDataContainer<T, ID> extends AbstractDataContainer<T, ID> {
 
     @Override
     public Optional<T> findById(ID id) {
-        String values = StringUtils.join(getColumnNames(), ", ");
+        String values = StringUtils.join(getColumnNames().stream().map(name -> "`" + name + "`").collect(Collectors.toList()), ", ");
         String sql = String.format("SELECT %s FROM `%s` WHERE `%s`=? LIMIT 1;", values, getName(), getPrimaryColumn().getName());
 
+        boolean found = false;
         Data data = new HashMapData();
         data.writeObjectValue(getPrimaryColumn().getName(), id);
         try (Connection connection = dataSource.getConnection()) {
@@ -192,6 +193,7 @@ public class MySqlDataContainer<T, ID> extends AbstractDataContainer<T, ID> {
             statement.setObject(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
+                found = true;
                 for (Column column : getColumns()) {
                     if (column.isPrimary())
                         continue;
@@ -203,7 +205,7 @@ public class MySqlDataContainer<T, ID> extends AbstractDataContainer<T, ID> {
             e.printStackTrace();
         }
 
-        return Optional.ofNullable(getObjectMapper().apply(data));
+        return Optional.ofNullable(found ? getObjectMapper().apply(data) : null);
     }
 
     @Override
