@@ -113,6 +113,6 @@ public class SpigotYamlConfig extends AbstractConfig<YamlConfiguration> {
 
     @Override
     public Collection<String> getKeys(String path) {
-        return path.isEmpty() ? this.config.getKeys(false) : this.config.getConfigurationSection(path).getKeys(false);
+        return path.isEmpty() ? config.getKeys(false) : config.getConfigurationSection(path).getKeys(false);
     }
 }
