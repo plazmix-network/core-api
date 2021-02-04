@@ -24,4 +24,12 @@ public class LocaleConfig {
                 strings.put(key, Core.getApi().colorize(str));
         }
     }
+
+    public String getMessage(String key) {
+        return strings.get(key);
+    }
+
+    public List<String> getMessages(String key) {
+        return lists.get(key);
+    }
 }
