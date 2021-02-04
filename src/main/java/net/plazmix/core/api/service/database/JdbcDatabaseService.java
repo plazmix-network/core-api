@@ -18,4 +18,6 @@ public interface JdbcDatabaseService extends Service {
     Optional<DataSource> getDataSource(String id);
 
     void invalidateDataSource(String id);
+
+    void invalidateAll();
 }
