@@ -4,6 +4,7 @@ import net.plazmix.core.api.CoreApi;
 import net.plazmix.core.api.common.command.CommandBuilder;
 import net.plazmix.core.api.spigot.inventory.view.builder.GlobalViewInventoryBuilder;
 import net.plazmix.core.api.spigot.inventory.view.builder.PersonalViewInventoryBuilder;
+import net.plazmix.core.api.spigot.nametag.NametagManager;
 import org.bukkit.plugin.Plugin;
 
 /**
@@ -26,4 +27,6 @@ public interface SpigotCoreApi extends CoreApi {
     CommandBuilder newCommand(Plugin plugin, String name);
 
     CommandBuilder newCommand(Plugin plugin, String holder, String name);
+
+    NametagManager getNametagManager();
 }
