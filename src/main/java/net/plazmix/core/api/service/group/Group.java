@@ -14,9 +14,13 @@ public enum Group {
     GALAXY("&5", "", "&5&lGalaxy", false),
     COSMO("&1", "", "&1&lCosmo", false),
 
-    CHAT_MODER("&2&lCHAT MODER &2", "", "&2&lCHAT MODER", true),
-    MODER("&9&lMODER &9", "", "&9&lMODER", true),
-    TRUE_MODER("&3&lMODER+ &3", "", "&3&lMODER+", true),
+    MEDIA("&b&lMEDIA &b", "", "&b&lMEDIA", false),
+    PARTNER("&b&lPARTNER &b", "", "&b&lPARTNER", false),
+
+    EVENT_MAKER("&d&lEVENT &d", "", "&d&lEVENT", true),
+    CHAT_MODER("&2&lCHATMOD &2", "", "&2&lCHATMOD", true),
+    MODER("&9&lMOD &9", "", "&9&lMOD", true),
+    TRUE_MODER("&3&lTRUEMOD &3", "", "&3&lTRUEMOD", true),
     MANAGER("&9&lMANAGER &9", "", "&9&lMANAGER", true),
     CURATOR("&c&lCURATOR &c", "", "&c&lCURATOR", true),
     DEV("&9&lDEV &9", "", "&9&lDEV", true),
