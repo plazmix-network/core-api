@@ -15,13 +15,16 @@ public class LocaleConfig {
         config.load();
 
         for (String key : config.getKeys("")) {
-            String str = config.getString(key);
-            if (str == null) {
+            Object o = config.getObject(key);
+            if (o == null)
+                continue;
+
+            if (o instanceof List) {
                 List<String> list = config.getStringList(key);
                 if (list != null)
                     lists.put(key, Core.getApi().colorize(list));
-            } else
-                strings.put(key, Core.getApi().colorize(str));
+            } else if (o instanceof String)
+                strings.put(key, Core.getApi().colorize(config.getString(key)));
         }
     }
 
